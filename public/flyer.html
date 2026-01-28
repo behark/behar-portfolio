@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behar Kabashi - Web Design Profesional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: white;
+            color: #1f2937;
+        }
+        
+        .flyer {
+            width: 210mm;
+            height: 297mm;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            color: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+        
+        .name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+        
+        .main-content {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            color: #1f2937;
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .benefits {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .benefits li {
+            padding: 12px 0;
+            font-size: 16px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+        }
+        
+        .benefits li:last-child {
+            border-bottom: none;
+        }
+        
+        .check {
+            color: #10b981;
+            font-size: 20px;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+        
+        .pricing {
+            background: #f3f4f6;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .price-note {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .contact {
+            background: #1e40af;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .qr-placeholder {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 8px;
+            margin: 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e40af;
+            font-size: 12px;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        @media print {
+            .flyer {
+                margin: 0;
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="header">
+            <div class="logo">BK</div>
+            <div class="name">Behar Kabashi</div>
+            <div class="tagline">Web Design Profesional për Bizneset Lokale</div>
+        </div>
+        
+        <div class="main-content">
+            <div class="title">Çfarë Mund të Bëjë një Website për Biznesin Tuaj?</div>
+            
+            <ul class="benefits">
+                <li><span class="check">✓</span> Të gjendshëm në Google - Shfaqeni kur klientët kërkojnë për shërbimet tuaja</li>
+                <li><span class="check">✓</span> Merrni Klientë Potencialë - Merrni pyetjet e klientëve 24/7 pa ngritur një gisht</li>
+                <li><span class="check">✓</span> Rritni të Ardhurat - Shndërroni vizitorët e website-it në klientë pagues</li>
+                <li><span class="check">✓</span> Profesionalizëm - Ndërtoni besim dhe kredibilitet me klientët tuaj</li>
+                <li><span class="check">✓</span> Konkurrencë - Tani mund të konkurroni me bizneset më të mëdha</li>
+            </ul>
+            
+            <div class="pricing">
+                <div class="price">Nga €250</div>
+                <div class="price-note">Website profesional i gatshëm në 5-7 ditë</div>
+            </div>
+            
+            <div class="contact">
+                <div class="contact-title">Kontaktoni Tani për Konsulencë Falas</div>
+                <div class="contact-info">
+                    <div>📱 +383 49 333 019</div>
+                    <div>✉️ beharkabashi19@gmail.com</div>
+                    <div>🌐 www.beharkabashi.com</div>
+                    <div class="qr-placeholder">
+                        Scan për të<br>
+                        vizituar website
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div>Garancia 30 ditë kënaqësie • 50+ Projekte të Suksesshme</div>
+        </div>
+    </div>
+</body>
+</html>

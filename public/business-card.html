@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behar Kabashi - Business Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: 85mm 55mm;
+            margin: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f3f4f6;
+        }
+        
+        .card {
+            width: 85mm;
+            height: 55mm;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            position: relative;
+            padding: 8mm;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-front {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        
+        .card-back {
+            background: white;
+            color: #1f2937;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        
+        .logo {
+            width: 35px;
+            height: 35px;
+            background: white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+        
+        .name-section {
+            flex: 1;
+        }
+        
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .title {
+            font-size: 11px;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            font-size: 9px;
+            line-height: 1.6;
+        }
+        
+        .contact-info div {
+            margin-bottom: 3px;
+        }
+        
+        .website {
+            font-size: 10px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        
+        .tagline {
+            font-size: 8px;
+            opacity: 0.9;
+            text-align: center;
+            margin-top: 5px;
+        }
+        
+        .back-content {
+            padding: 8mm;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .back-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        
+        .back-services {
+            font-size: 9px;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+        
+        .back-services div {
+            margin-bottom: 3px;
+        }
+        
+        .back-contact {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 8px;
+            color: #6b7280;
+            text-align: center;
+        }
+        
+        @media print {
+            .card {
+                page-break-after: always;
+                margin: 0;
+            }
+        }
+        
+        /* Print layout - 10 cards per page */
+        @media print {
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+            
+            body {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                gap: 5mm;
+                width: 210mm;
+                height: 297mm;
+            }
+            
+            .card {
+                width: 85mm;
+                height: 55mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Front of Card -->
+    <div class="card card-front">
+        <div class="header">
+            <div class="logo">BK</div>
+            <div class="name-section">
+                <div class="name">Behar Kabashi</div>
+                <div class="title">Web Design & Development</div>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <div>📱 +383 49 333 019</div>
+            <div>✉️ beharkabashi19@gmail.com</div>
+            <div class="website">www.beharkabashi.com</div>
+        </div>
+        
+        <div class="tagline">
+            Website Profesional për Biznesin Tuaj
+        </div>
+    </div>
+    
+    <!-- Back of Card (Optional - can be printed separately) -->
+    <div class="card card-back">
+        <div class="back-content">
+            <div class="back-title">Shërbimet Tona</div>
+            <div class="back-services">
+                <div>✓ Website Profesional</div>
+                <div>✓ E-Commerce</div>
+                <div>✓ Sistem Rezervimesh</div>
+                <div>✓ SEO & Marketing</div>
+                <div>✓ Mbështetje Teknike</div>
+            </div>
+            <div class="back-contact">
+                Konsulencë Falas • Garancia 30 Ditë
+            </div>
+        </div>
+    </div>
+</body>
+</html>
