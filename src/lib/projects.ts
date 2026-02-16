@@ -13,93 +13,69 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: '1',
-        title: 'Arbana Beauty',
-        description: 'Website profesional për salon bukurie me sistem rezervimesh online dhe galeri punimesh.',
-        url: 'https://arbanabeauty.vercel.app/',
-        // To use local image: add arbanabeauty.jpg to public/images/portfolio/
-        // Currently using optimized Unsplash image (temporary)
-        image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85',
-        technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
-        category: 'Beauty & Wellness',
-        language: 'Shqip',
-        results: 'Rritje 30% e rezervimeve online'
+        title: 'Ecommerce Platforms',
+        description: 'Platformë multi-tenant e-commerce me arkitekturë moderne për menaxhim dyqanesh, katalogësh dhe porosive.',
+        url: 'https://ecommerce-platforms-iota.vercel.app',
+        image: '/images/portfolio/ecommerce-platforms.jpg',
+        technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'TypeScript'],
+        category: 'SaaS & Ecommerce',
+        language: 'English',
+        results: 'Arkitekturë multi-tenant production-ready'
     },
     {
         id: '2',
-        title: 'Fußballschule',
-        description: 'Website për shkollë futbollistike në Gjermani me program trajnimi dhe regjistrim online.',
-        url: 'https://fussballschule.vercel.app/',
-        image: 'https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=1200&q=85',
-        technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
-        category: 'Sports & Education',
-        language: 'Gjermanisht',
-        results: '50+ regjistrime të reja në muaj'
+        title: 'Kosovo Invoicing SaaS',
+        description: 'SaaS invoicing full-stack i ndërtuar me Next.js, PostgreSQL dhe TypeScript për biznese në Kosovë.',
+        url: 'https://kosovo-invoicing-saas.vercel.app',
+        image: '/images/portfolio/kosovo-invoicing-saas.jpg',
+        technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'SaaS Architecture'],
+        category: 'Fintech & SaaS',
+        language: 'English',
+        results: 'Platformë invoicing e gatshme për zgjerim'
     },
     {
         id: '3',
-        title: 'Taxi Luigi',
-        description: 'Website për shërbim taxi në Austri me sistem porosish online dhe gjurmim GPS.',
-        url: 'https://www.taxiluigi.at/de',
-        image: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=85',
-        technologies: ['React', 'Node.js', 'MongoDB', 'GPS Integration'],
-        category: 'Transportation',
-        language: 'Gjermanisht',
-        results: '25% rritje e porosive online'
+        title: 'VOIP Call Center',
+        description: 'Platformë call center me VOIP për menaxhim thirrjesh, agjentësh dhe monitorim të performancës në kohë reale.',
+        url: 'https://voip-call-center.vercel.app',
+        image: '/images/portfolio/voip-call-center.jpg',
+        technologies: ['Next.js', 'Node.js', 'WebRTC/VOIP', 'Realtime Monitoring'],
+        category: 'Communications',
+        language: 'English',
+        results: 'Menaxhim i centralizuar për operacionet e thirrjeve'
     },
     {
         id: '4',
-        title: 'Kroi Auto Center',
-        description: 'Website për qendër servis veturash në Finlandë me sistem rezervimesh dhe galeri.',
-        url: 'https://kroi-auto-center.vercel.app/',
-        image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=85',
-        technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
-        category: 'Automotive',
-        language: 'Finlandisht',
-        results: '20+ rezervime në javë'
+        title: 'POS System',
+        description: 'Sistem POS për menaxhim shitjesh, transaksionesh dhe operacione ditore për biznese lokale.',
+        url: 'https://github.com/behark/pos-system',
+        image: '/images/portfolio/pos-system.jpg',
+        technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Dashboard UI'],
+        category: 'Retail & POS',
+        language: 'English',
+        results: 'Workflow më i shpejtë për operacionet e kasës'
     },
     {
         id: '5',
-        title: 'Kiiltoloisto',
-        description: 'Website për kompani detailing dhe pastrim profesional veturash në Finlandë.',
-        url: 'https://kiiltoloisto.fi/',
-        image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85',
-        technologies: ['WordPress', 'PHP', 'MySQL', 'WooCommerce'],
-        category: 'Automotive',
-        language: 'Finlandisht',
-        results: '40% rritje e kërkesave'
+        title: 'IPTV Platform',
+        description: 'Platformë e avancuar IPTV me menaxhim kanalesh, playlist utilities dhe eksport të dhënash në shkallë të madhe.',
+        url: 'https://iptv-platform-sable.vercel.app',
+        image: '/images/portfolio/iptv-platform.jpg',
+        technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'Automation Scripts'],
+        category: 'Media & Streaming',
+        language: 'English',
+        results: '10,900+ kanale të menaxhuara'
     },
     {
         id: '6',
-        title: 'Ani Auto Salon',
-        description: 'Website për salon makinash në Kosovë me katalog automjetesh dhe kontakt.',
-        url: 'https://www.aniautosallon.com/',
-        image: 'https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=85',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Image Gallery'],
-        category: 'Automotive',
-        language: 'Shqip',
-        results: '15+ pyetje në ditë'
-    },
-    {
-        id: '7',
-        title: 'Digiscreen Kosovo',
-        description: 'Website për kompani dixhitale me shërbime marketingu dhe portofol punimesh.',
-        url: 'https://digiscreen-kosovo.vercel.app/',
-        image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=85',
-        technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
-        category: 'Digital Marketing',
-        language: 'Shqip',
-        results: '25+ klientë të rinj'
-    },
-    {
-        id: '8',
-        title: 'Lebendigkeitsberatung',
-        description: 'Website për konsulencë jetësore në Gjermani me blog dhe program konsulencash.',
-        url: 'https://lebendigkeitsberatung.vercel.app/',
-        image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=85',
-        technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
-        category: 'Health & Wellness',
-        language: 'Gjermanisht',
-        results: '100+ vizitorë mujorë'
+        title: 'Dating App',
+        description: 'Aplikacion social me gamification, monitorim dhe infrastrukturë të optimizuar për performancë production.',
+        url: 'https://dating-app-seven-peach.vercel.app',
+        image: '/images/portfolio/dating-app.jpg',
+        technologies: ['JavaScript', 'TypeScript', 'Microservices', 'DevOps'],
+        category: 'Social Platform',
+        language: 'English',
+        results: 'Deployments aktive dhe iterim i shpejtë i feature-ve'
     }
 ];
 

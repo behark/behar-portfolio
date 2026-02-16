@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -11,18 +10,15 @@ import { StructuredData } from "@/components/StructuredData";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import Script from "next/script";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://yourdomain.com");
+const ogImage = process.env.NEXT_PUBLIC_SITE_URL
+  ? `${siteUrl}/images/og/og-image.jpg`
+  : "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&h=630&q=85";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Behar Kabashi - Web Design Profesional",
   description: "Web design profesional për bizneset lokale në Kosovë. Website-a moderne që sjellin rezultata reale.",
   keywords: ["web design", "website", "biznes", "Kosovë", "profesional", "modern"],
@@ -35,13 +31,7 @@ export const metadata: Metadata = {
     siteName: "Behar Kabashi - Web Design Profesional",
     images: [
       {
-        // Use local image if available, otherwise use optimized Unsplash image
-        // To use local image: add og-image.jpg to public/images/og/
-        url: process.env.NEXT_PUBLIC_SITE_URL 
-          ? `${process.env.NEXT_PUBLIC_SITE_URL}/images/og/og-image.jpg`
-          : process.env.NEXT_PUBLIC_SITE_URL
-          ? `${process.env.NEXT_PUBLIC_SITE_URL}/images/og/og-image.jpg`
-          : "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&h=630&q=85",
+        url: ogImage,
         width: 1200,
         height: 630,
         alt: "Behar Kabashi - Web Design Profesional",
@@ -57,9 +47,7 @@ export const metadata: Metadata = {
     title: "Behar Kabashi - Web Design Profesional",
     description: "Web design profesional për bizneset lokale në Kosovë. Website-a moderne që sjellin rezultata reale.",
     images: [
-      process.env.NEXT_PUBLIC_SITE_URL 
-        ? `${process.env.NEXT_PUBLIC_SITE_URL}/images/og/og-image.jpg`
-        : "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&h=630&q=85"
+      ogImage
     ],
   },
 };
@@ -71,9 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sq" suppressHydrationWarning className="light">
-      <body
-        className={`${inter.variable} ${poppins.variable} antialiased`}
-      >
+      <body className="antialiased">
         <Script
           id="theme-script"
           strategy="beforeInteractive"

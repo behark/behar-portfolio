@@ -50,7 +50,7 @@ export function LeadGeneratorTestimonials() {
                                     ))}
                                 </div>
                                 <p className="text-gray-700 dark:text-gray-300 mb-6 italic">
-                                    "{testimonial.text}"
+                                    &ldquo;{testimonial.text}&rdquo;
                                 </p>
                                 <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-2xl">

@@ -22,13 +22,13 @@ export function PortfolioPageContent() {
             <Navbar />
 
             <main id="main-content">
-            <section ref={ref} className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors">
+            <section ref={ref} className="section-base bg-gray-50 dark:bg-gray-800 transition-colors">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className={`text-center mb-16 ${inView ? 'animate-fadeInUp' : ''}`}>
-                        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 font-display">
+                        <h1 className="heading-lg text-gray-900 dark:text-white mb-4 font-display">
                             Portfolio
                         </h1>
-                        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                        <p className="body-lg max-w-3xl mx-auto">
                             Projekte të realizuara për klientë nga industria të ndryshme
                         </p>
                     </div>
@@ -37,12 +37,10 @@ export function PortfolioPageContent() {
                         {projects.map((project, index) => (
                             <div
                                 key={project.id}
-                                className={`project-card bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden card-hover border border-gray-200 dark:border-gray-700 ${inView ? 'animate-scaleIn' : ''}`}
+                                className={`project-card bg-white dark:bg-gray-900 rounded-xl shadow-sm overflow-hidden card-hover border border-gray-200 dark:border-gray-700 ${inView ? 'animate-fadeIn' : ''}`}
                                 style={{ animationDelay: `${index * 0.1}s` }}
                             >
-                                {/* Project Image */}
-                                <div className="relative h-48 overflow-hidden bg-gray-900">
-                                    {/* Get fallback image based on project */}
+                                <div className="relative aspect-[16/10] overflow-hidden bg-gray-900">
                                     {(() => {
                                         const fallbackImages: Record<string, string> = {
                                             '1': 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85',
@@ -51,8 +49,6 @@ export function PortfolioPageContent() {
                                             '4': 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=85',
                                             '5': 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85',
                                             '6': 'https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=85',
-                                            '7': 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=85',
-                                            '8': 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=85',
                                         };
                                         const imageSrc = project.image?.startsWith('/') 
                                             ? project.image 
@@ -65,7 +61,7 @@ export function PortfolioPageContent() {
                                                     src={imageSrc}
                                                     alt={`${project.title} - ${project.description}`}
                                                     fill
-                                                    className="object-cover"
+                                                    className="object-cover object-center scale-[1.06]"
                                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                     loading={index < 3 ? "eager" : "lazy"}
                                                     onLoad={() => {
@@ -83,11 +79,10 @@ export function PortfolioPageContent() {
                                                         }
                                                     }}
                                                 />
-                                                {/* Gradient Overlay */}
                                                 <div 
                                                     className="absolute inset-0"
                                                     style={{
-                                                        background: 'linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4))',
+                                                        background: 'linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.08))',
                                                     }}
                                                 />
                                             </>
@@ -102,7 +97,6 @@ export function PortfolioPageContent() {
                                             </div>
                                         );
                                     })()}
-                                    {/* Hover Overlay */}
                                     <div className="project-overlay">
                                         <div className="text-white">
                                             <h4 className="font-bold text-lg mb-2">{project.title}</h4>
@@ -149,9 +143,9 @@ export function PortfolioPageContent() {
                                             href={project.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 btn-primary text-center hover:scale-105 focus-visible:outline-2 focus-visible:outline-blue-400 focus-visible:outline-offset-2"
+                                            className="flex-1 btn-primary text-center"
                                         >
-                                            Shiko Website
+                                            Shiko Projektin
                                         </a>
                                     </div>
                                 </div>

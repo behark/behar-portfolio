@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { FiCheckCircle, FiXCircle, FiInfo, FiAlertCircle, FiX } from 'react-icons/fi';
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
+const SHOW_TOAST_EVENT = 'showToast' as const;
 
 export interface Toast {
     id: string;
@@ -17,30 +18,42 @@ interface ToastProps {
     onClose: (id: string) => void;
 }
 
+type ShowToastDetail = Omit<Toast, 'id'>;
+
+declare global {
+    interface WindowEventMap {
+        showToast: CustomEvent<ShowToastDetail>;
+    }
+}
+
 function ToastComponent({ toast, onClose }: ToastProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [isExiting, setIsExiting] = useState(false);
 
+    const handleClose = useCallback(() => {
+        setIsExiting(true);
+        window.setTimeout(() => {
+            onClose(toast.id);
+        }, 300);
+    }, [onClose, toast.id]);
+
     useEffect(() => {
         // Trigger entrance animation
-        setTimeout(() => setIsVisible(true), 10);
+        const entranceTimer = window.setTimeout(() => setIsVisible(true), 10);
+        let dismissTimer: number | undefined;
 
         // Auto-dismiss
         if (toast.duration !== 0) {
-            const timer = setTimeout(() => {
-                handleClose();
-            }, toast.duration || 5000);
-
-            return () => clearTimeout(timer);
+            dismissTimer = window.setTimeout(handleClose, toast.duration ?? 5000);
         }
-    }, [toast.duration]);
 
-    const handleClose = () => {
-        setIsExiting(true);
-        setTimeout(() => {
-            onClose(toast.id);
-        }, 300);
-    };
+        return () => {
+            window.clearTimeout(entranceTimer);
+            if (dismissTimer) {
+                window.clearTimeout(dismissTimer);
+            }
+        };
+    }, [handleClose, toast.duration]);
 
     const icons = {
         success: FiCheckCircle,
@@ -95,7 +108,7 @@ export function ToastContainer() {
 
     useEffect(() => {
         // Listen for toast events
-        const handleToast = (event: CustomEvent<Omit<Toast, 'id'>>) => {
+        const handleToast = (event: WindowEventMap[typeof SHOW_TOAST_EVENT]) => {
             const newToast: Toast = {
                 id: Math.random().toString(36).substring(7),
                 ...event.detail,
@@ -103,10 +116,10 @@ export function ToastContainer() {
             setToasts((prev) => [...prev, newToast]);
         };
 
-        window.addEventListener('showToast' as any, handleToast as EventListener);
+        window.addEventListener(SHOW_TOAST_EVENT, handleToast);
 
         return () => {
-            window.removeEventListener('showToast' as any, handleToast as EventListener);
+            window.removeEventListener(SHOW_TOAST_EVENT, handleToast);
         };
     }, []);
 
@@ -131,7 +144,7 @@ export function ToastContainer() {
 
 // Helper function to show toast
 export function showToast(message: string, type: ToastType = 'info', duration?: number) {
-    const event = new CustomEvent('showToast', {
+    const event = new CustomEvent<ShowToastDetail>(SHOW_TOAST_EVENT, {
         detail: { message, type, duration },
     });
     window.dispatchEvent(event);

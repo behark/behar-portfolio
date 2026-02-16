@@ -1,16 +1,15 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
+
+function subscribe() {
+    return () => {};
+}
 
 export function ThemeToggle() {
     const { theme, setTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-
-    // Avoid hydration mismatch by only rendering after mount
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    const mounted = useSyncExternalStore(subscribe, () => true, () => false);
 
     if (!mounted) {
         // Return a placeholder with the same dimensions to prevent layout shift

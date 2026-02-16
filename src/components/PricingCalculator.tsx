@@ -4,12 +4,6 @@ import { useState } from 'react';
 import { FiDollarSign, FiCheck } from 'react-icons/fi';
 import { ScrollReveal } from '@/components/ScrollReveal';
 
-interface CalculatorOptions {
-    pages: number;
-    features: string[];
-    support: string;
-}
-
 const featureOptions = [
     { id: 'contact-form', label: 'Formular Kontakti', price: 0 },
     { id: 'gallery', label: 'Galeri Fotografish', price: 50 },
