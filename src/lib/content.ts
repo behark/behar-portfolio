@@ -33,11 +33,11 @@ export const content = {
       }
     },
     stats: {
-      clients: '50+',
+      clients: '100+',
       clientsLabel: 'Biznese lokale na besojnë',
       revenue: '€2.5M+',
       revenueLabel: 'Të ardhura të gjeneruara për klientët',
-      customers: '5,000+',
+      customers: '10,000+',
       customersLabel: 'Klientë të rinj të sjellë'
     }
   },
