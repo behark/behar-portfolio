@@ -1,4 +1,4 @@
-// Albanian content for portfolio website
+// Albanian content for Apex Agency professional website
 export const content = {
   // Navigation
   nav: {
@@ -11,157 +11,161 @@ export const content = {
   // Homepage
   home: {
     hero: {
-      title: 'Web Design Profesional për Bizneset Lokale',
-      subtitle: 'Të gjendshëm në Google. Tërhiqni më shumë klientë. Ndërtuar në 5-7 ditë.',
-      cta: 'Shihni Shembujt',
-      ctaSecondary: 'Na Kontaktoni'
+      title: 'Agjenci Profesionale e Zhvillimit Web & IT',
+      subtitle: 'Zhvillojmë zgjidhje dixhitale për institucione, komuna dhe biznese në Kosovë. Teknologji moderne, dorëzim i shpejtë, cilësi e lartë.',
+      cta: 'Shihni Projektet',
+      ctaSecondary: 'Kërkoni Ofertë'
     },
     benefits: {
-      title: 'Çfarë mund të bëjë një website për biznesin tuaj?',
-      subtitle: 'Shumica e bizneseve lokale nuk e kuptojnë: 80% e klientëve kërkojnë online për t\'u vizituar.',
+      title: 'Shërbime Profesionale IT për Sektorin Publik & Privat',
+      subtitle: 'Ofrojmë zgjidhje të plota dixhitale — nga zhvillimi i faqeve web deri te sistemet e menaxhimit dhe infrastruktura dixhitale.',
       getFound: {
-        title: 'Të gjendshëm në Google',
-        description: 'Shfaqeni kur klientët kërkojnë për shërbimet tuaja'
+        title: 'Zhvillim Web & Aplikacionesh',
+        description: 'Faqe institucionale, portale, sisteme online me teknologji moderne'
       },
       captureLeads: {
-        title: 'Merrni Klientë Potencialë',
-        description: 'Merrni pyetjet e klientëve 24/7 pa ngritur një gisht'
+        title: 'Infrastrukturë & Hostim',
+        description: 'Serverë të sigurt, SSL, mirëmbajtje dhe monitorim 24/7'
       },
       growRevenue: {
-        title: 'Rritni të Ardhurat',
-        description: 'Shndërroni vizitorët e website-it në klientë pagues'
+        title: 'Konsulencë & Strategji Dixhitale',
+        description: 'Transformim dixhital, optimizim SEO dhe marketing online'
       }
     },
     stats: {
-      clients: '100+',
-      clientsLabel: 'Biznese lokale na besojnë',
-      revenue: '€2.5M+',
-      revenueLabel: 'Të ardhura të gjeneruara për klientët',
-      customers: '10,000+',
-      customersLabel: 'Klientë të rinj të sjellë'
+      clients: '200+',
+      clientsLabel: 'Projekte të realizuara',
+      revenue: '50+',
+      revenueLabel: 'Klientë aktivë',
+      customers: '99.9%',
+      customersLabel: 'Uptime i garantuar'
     }
   },
 
   // Portfolio
   portfolio: {
-    title: 'Projektet e Fundit',
+    title: 'Projektet e Realizuara',
     projects: [
       {
-        title: '✅ Dentist merr 12 Takime të Reja/Muaj',
-        description: 'Klinika dentare e Dr. Peja s\'kishte asnjë prezencë online. Tani renditen në Google dhe marrin rezervime automatike.',
+        title: 'Platforma Web për Biznese Lokale',
+        description: 'Zhvilluam mbi 200 faqe web profesionale për biznese në tërë Kosovën — restorante, hotele, klinika, agjenci dhe më shumë.',
         before: {
-          title: 'PËRSHKRIM:',
-          points: ['• Asnjë website', '• I vështirë për t\'u gjetur', '• Humbje rezervimesh pas orarit']
+          title: 'SFIDA:',
+          points: ['• Biznese pa prezencë online', '• Humbje e klientëve dixhitalë', '• Pamundësi e rezervimeve online']
         },
         after: {
-          title: 'PAS:',
-          points: ['• Website profesional 5 faqesh', '• Shfaqet në Google Maps', '• Sistem rezervimesh online']
+          title: 'ZGJIDHJA:',
+          points: ['• Faqe profesionale responsive', '• Integrim me Google Maps & SEO', '• Sisteme kontakti dhe rezervimesh']
         },
-        result: 'REZULTAT: 12 takime të reja muajin e parë (€600+ të ardhura)',
-        url: 'https://arbanabeauty.vercel.app/'
+        result: 'REZULTAT: 200+ faqe të lansuara, mesatarisht +35% klientë të rinj',
+        url: 'https://webpro-demos-kosovo.vercel.app'
       },
       {
-        title: '✅ Restorant merr 20% më shumë Porosi',
-        description: 'Restoranti lokal nuk mund të konkurronte online. Website me menu + sistem porosish ndryshoi gjithçka.',
+        title: 'Platformë SaaS Faturimi',
+        description: 'Sistem i plotë faturimi online për biznese në Kosovë — me raporte, menaxhim klientësh dhe integrim fiskal.',
         before: {
-          title: 'PËRSHKRIM:',
-          points: ['• Asnjë menu online', '• Thirrje vetëm telefonike', '• Humbje klientësh']
+          title: 'SFIDA:',
+          points: ['• Faturim manual me gabime', '• Humbje kohe administrative', '• Pa raporte financiare']
         },
         after: {
-          title: 'PAS:',
-          points: ['• Menu e plotë online', '• Porosi online', '• I përshtatshëm për celular']
+          title: 'ZGJIDHJA:',
+          points: ['• Platformë cloud me dashboard', '• Fatura automatike PDF', '• Raporte dhe analitikë në kohë reale']
         },
-        result: 'REZULTAT: Rritje 20% e porosive (€1000+ të ardhura shtesë/muaj)',
-        url: 'https://fussballschule.vercel.app/'
+        result: 'REZULTAT: Kursim 80% i kohës administrative për klientët',
+        url: 'https://kosovo-invoicing-saas.vercel.app'
       },
       {
-        title: '✅ Pronari i Salonit kursen 2 Orë/Ditë',
-        description: 'Kalonte shumë kohë në thirrje për rezervime. Sistemi online i rezervimeve ndryshoi lojën.',
+        title: 'Platformë E-Commerce Multi-Tenant',
+        description: 'Arkitekturë moderne e-commerce që mundëson menaxhimin e shumë dyqaneve nga një panel i vetëm.',
         before: {
-          title: 'PËRSHKRIM:',
-          points: ['• 2 orë/ditë në thirrje', '• Rezervime të humbura', '• Klientë të frustruar']
+          title: 'SFIDA:',
+          points: ['• Nevoja për shumë dyqane online', '• Menaxhim i centralizuar', '• Shkallëzim i shpejtë']
         },
         after: {
-          title: 'PAS:',
-          points: ['• Rezervime të automatizuara', '• 15 rezervime shtesë', '• 2 orë kursyera në ditë']
+          title: 'ZGJIDHJA:',
+          points: ['• Arkitekturë multi-tenant', '• Panel administrativ i unifikuar', '• Pagesa online të integruara']
         },
-        result: 'REZULTAT: 15 rezervime shtesë + 2 orë kursyera në ditë',
-        url: 'https://www.taxiluigi.at/de'
+        result: 'REZULTAT: Platformë production-ready për tregun kosovar',
+        url: 'https://ecommerce-platforms-iota.vercel.app'
       }
     ]
   },
 
   // About
   about: {
-    title: 'Rreth Nesh',
-    description: 'Ne jemi një ekip i dedikuar për të ndihmuar bizneset lokale të kenë sukses në botën dixhitale. Me më shumë se 5 vite përvojë në web design dhe marketing dixhital, kemi ndihmuar mbi 50 biznese të rrisin praninë e tyre online.',
-    mission: 'Misioni ynë është të ofrojmë website-a profesionale dhe efektive që sjellin rezultate reale për bizneset tuaja.',
+    title: 'Rreth Apex Agency',
+    description: 'Apex Agency është agjenci e specializuar në zhvillim web, dizajn dixhital dhe zgjidhje IT për sektorin publik dhe privat në Kosovë. E regjistruar në ARBK me aktivitete primare në programim kompjuterik (62.01), dizajn (74.10), publicitet (73.11) dhe hostim (63.11).',
+    mission: 'Misioni ynë është dixhitalizimi i bizneseve dhe institucioneve në Kosovë përmes teknologjive moderne, me fokus në cilësi, siguri dhe efikasitet.',
     values: [
-      'Cilësi dhe profesionalizëm',
-      'Fokus në rezultate të matshme',
-      'Mbështetje dhe komunikim të vazhdueshëm',
-      'Çmime transparente dhe të arsyeshme'
+      'Profesionalizëm dhe cilësi e lartë teknike',
+      'Dorëzim brenda afatit të dakorduar',
+      'Transparencë e plotë në çmime dhe procese',
+      'Mbështetje teknike e vazhdueshme pas dorëzimit',
+      'Përputhshmëri me standardet ndërkombëtare'
     ],
     cta: {
-      title: 'Gati për të rritur biznesin tuaj?',
-      description: 'Kontaktoni sot për një konsulencë falas dhe merrni ofertën tuaj personale.',
-      button: 'Kontaktoni Tani'
+      title: 'Kërkoni ofertë për projektin tuaj',
+      description: 'Kontaktoni për një konsultim profesional pa obligim. Oferta e personalizuar brenda 24 orëve.',
+      button: 'Kërkoni Ofertë'
     }
   },
 
   // Contact
   contact: {
-    title: 'Na Kontaktoni',
-    description: 'Jeni gati të merrni më shumë klientë? Biznesi juaj meriton një prezencë online profesionale.',
+    title: 'Kontaktoni Apex Agency',
+    description: 'Për oferta, bashkëpunime dhe informata teknike — jemi të gatshëm t\'ju ndihmojmë.',
     form: {
-      name: 'Emri',
+      name: 'Emri / Institucioni',
       email: 'Email',
       phone: 'Telefon',
-      message: 'Mesazhi',
-      submit: 'Dërgo Mesazhin'
+      message: 'Përshkrim i projektit',
+      submit: 'Dërgo Kërkesën'
     },
     info: {
       phone: '+383 49 333 019',
-      email: 'beharkabashi19@gmail.com',
-      location: 'Kosovë'
+      email: 'beharkabashi22@gmail.com',
+      location: 'Mitrovicë, Kosovë'
     }
   },
 
   // Pricing
   pricing: {
-    title: 'Çmime të Thjeshta dhe Transparente',
+    title: 'Paketat e Shërbimeve',
     plans: [
       {
-        name: 'STARTER',
-        price: '€250',
+        name: 'BAZË',
+        price: '€350',
         features: [
-          '1 faqe profesionale',
-          'Formular kontakti',
-          'I përshtatshëm për celular',
-          'Mbështetje përmes email-it'
+          'Faqe web responsive (1-3 faqe)',
+          'Dizajn profesional modern',
+          'Optimizim SEO bazik',
+          'Certifikatë SSL e përfshirë',
+          'Hostim 1 vit i përfshirë'
         ]
       },
       {
-        name: 'PROFESSIONAL ⭐',
-        price: '€500',
-        popular: 'MË POPULLORI',
+        name: 'PROFESIONAL',
+        price: '€800',
+        popular: 'MË I KËRKUARI',
         features: [
-          '5 faqe profesionale',
-          'Galeri fotografish',
-          'Integrimi me Google',
-          'Formular kontakti',
-          '1 muaj mbështetje falas'
+          'Faqe web e plotë (5-10 faqe)',
+          'Sistem kontakti & rezervimesh',
+          'Optimizim i plotë SEO',
+          'Integrim Google Maps & Analytics',
+          'Mirëmbajtje 3 muaj e përfshirë',
+          'Trajnim për stafin'
         ]
       },
       {
-        name: 'PREMIUM',
-        price: '€1,000',
+        name: 'ENTERPRISE',
+        price: '€2,000+',
         features: [
-          'Gjithçka në Professional +',
-          'Sistem rezervimesh online',
-          'Blerje pagesash',
-          '3 muaj mbështetje',
-          '+10-15 rezervime/muaj'
+          'Portal institucional i plotë',
+          'Sisteme të personalizuara',
+          'Integrime me API të jashtme',
+          'Dashboard administrativ',
+          'Mirëmbajtje 12 muaj',
+          'SLA me kohe reagimi të garantuar'
         ]
       }
     ]
@@ -169,21 +173,21 @@ export const content = {
 
   // Testimonials
   testimonials: {
-    title: 'Çfarë thonë klientët',
+    title: 'Referenca nga Klientët',
     items: [
       {
-        text: 'Nga 0 rezervime online deri në 15 në muaj. Investimi më i mirë që bëra këtë vit!',
-        author: 'Dr. Peja - Klinika Dentare',
+        text: 'Apex Agency na realizoi faqen brenda javës. Profesionalizëm i lartë dhe komunikim i shkëlqyer gjatë tërë procesit.',
+        author: 'Hotel Parliament — Prishtinë',
         stars: 5
       },
       {
-        text: 'Më shumë klientë na gjetën online, dhe porositë u rritën 20% në muajin e parë.',
-        author: 'Arben - Pronar Restoranti',
+        text: 'Zgjidhja dixhitale që na ofruan na kurseu kohë dhe solli klientë të rinj. E rekomandoj pa hezitim.',
+        author: 'Kristal Optika — Prishtinë',
         stars: 5
       },
       {
-        text: 'Ky website më kurseu kaq shumë kohë në thirrje telefonike dhe solli më shumë klientë.',
-        author: 'Lena - Pronare e Salonit',
+        text: 'Ekip serioz që e kupton nevojën e biznesit. Faqja jonë tani duket profesionale dhe funksionon perfekt.',
+        author: 'Gelato Cake House — Kosovë',
         stars: 5
       }
     ]
@@ -191,23 +195,23 @@ export const content = {
 
   // FAQ
   faq: {
-    title: 'Pyetjet më të Shpeshta',
+    title: 'Pyetjet e Shpeshta',
     items: [
       {
-        question: 'Sa kohë merr?',
-        answer: 'Zakonisht 5-7 ditë. Opsioni i shpejtë i disponueshëm në 2-3 ditë.'
+        question: 'Sa kohë zgjat realizimi i projektit?',
+        answer: 'Projektet standarde realizohen në 5-10 ditë pune. Projektet më komplekse (portale, sisteme) — 2-4 javë.'
       },
       {
-        question: 'Çfarë nëse nuk më pëlqen?',
-        answer: 'Garancia 30 ditë kënaqësie. Refundim i plotë nëse nuk jeni i kënaqur.'
+        question: 'A punoni me institucione publike?',
+        answer: 'Po. Jemi të regjistruar në ARBK me kodin e aktivitetit 62.01 dhe mund të marrim pjesë në prokurime publike.'
       },
       {
-        question: 'A më përket website-i?',
-        answer: 'Po, 100%. Ju e zotëroni domain-in, përmbajtjen, gjithçka.'
+        question: 'Çfarë teknologjish përdorni?',
+        answer: 'Next.js, React, TypeScript, PostgreSQL, Node.js, Vercel, dhe teknologji të tjera moderne të industrisë.'
       },
       {
-        question: 'Çmimet e hostimit?',
-        answer: 'Viti i parë i përfshirë. Rreth €40-50/vit pas kësaj.'
+        question: 'A ofroni mirëmbajtje pas dorëzimit?',
+        answer: 'Po. Çdo paketë përfshin periudhë mirëmbajtjeje. Gjithashtu ofrojmë kontrata mujore mirëmbajtjeje.'
       }
     ]
   }

@@ -10,19 +10,20 @@ export function SocialProof() {
     });
 
     const badges = [
-        { name: '5 Star Reviews', icon: FiStar, count: '50+' },
-        { name: 'Years Experience', icon: FiZap, count: '5+' },
-        { name: 'Happy Clients', icon: FiSmile, count: '100%' },
-        { name: 'Projects Delivered', icon: FiTarget, count: '100+' },
+        { name: 'Projekte të realizuara', icon: FiTarget, count: '200+' },
+        { name: 'Vite përvojë', icon: FiZap, count: '5+' },
+        { name: 'Klientë të kënaqur', icon: FiSmile, count: '100%' },
+        { name: 'Uptime i garantuar', icon: FiStar, count: '99.9%' },
     ];
 
     const clients = [
-        'Arbana Beauty',
-        'Fußballschule',
-        'Taxi Luigi',
-        'Kroi Auto Center',
-        'Kiiltoloisto',
-        'Ani Auto Salon',
+        'Hotel Parliament',
+        'Kristal Optika',
+        'Gelato Cake House',
+        'Horse Club Ranch',
+        'Fish & Mediterranean House',
+        'Mangall Restaurant',
+        'Best Western Hotel',
     ];
 
     return (
@@ -30,7 +31,7 @@ export function SocialProof() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className={`text-center mb-12 ${inView ? 'animate-fadeInUp' : ''}`}>
                     <h3 className="heading-md text-gray-900 dark:text-white mb-8">
-                        E merituar nga bizneset lokale
+                        Rezultate të dëshmuara
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {badges.map((badge, index) => {
@@ -58,7 +59,7 @@ export function SocialProof() {
 
                 <div className={`text-center ${inView ? 'animate-fadeInUp' : ''}`} style={{ animationDelay: '0.4s' }}>
                     <h3 className="heading-md text-gray-900 dark:text-white mb-6">
-                        Partnerët tanë
+                        Klientët tanë
                     </h3>
                     <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
                         {clients.map((client, index) => (
@@ -76,7 +77,7 @@ export function SocialProof() {
                     <div className="inline-flex items-center space-x-4 bg-white dark:bg-gray-900 px-6 py-3 rounded-full shadow-sm border border-gray-200 dark:border-gray-700">
                         <FiAward className="w-6 h-6 text-yellow-500 flex-shrink-0" aria-hidden="true" />
                         <span className="text-gray-700 dark:text-gray-300 font-medium">
-                            Vlerësuar si Web Designer #1 në Kosovë për bizneset lokale
+                            E regjistruar në ARBK — Kod aktiviteti: 62.01, 73.11, 74.10, 63.11
                         </span>
                     </div>
                 </div>

@@ -19,16 +19,16 @@ const ogImage = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Behar Kabashi - Web Design Profesional",
-  description: "Web design profesional për bizneset lokale në Kosovë. Website-a moderne që sjellin rezultata reale.",
-  keywords: ["web design", "website", "biznes", "Kosovë", "profesional", "modern"],
-  authors: [{ name: "Behar Kabashi" }],
+  title: "Apex Agency — Zhvillim Web & IT | Kosovë",
+  description: "Agjenci profesionale e zhvillimit web dhe zgjidhjeve IT për institucione, komuna dhe biznese në Kosovë. Teknologji moderne, dorëzim i shpejtë.",
+  keywords: ["web development", "IT services", "Kosovo", "website", "institucione", "komuna", "Apex Agency", "zhvillim web"],
+  authors: [{ name: "Apex Agency" }],
   openGraph: {
-    title: "Behar Kabashi - Web Design Profesional",
-    description: "Web design profesional për bizneset lokale në Kosovë",
+    title: "Apex Agency — Zhvillim Web & IT | Kosovë",
+    description: "Agjenci profesionale e zhvillimit web dhe zgjidhjeve IT për institucione, komuna dhe biznese në Kosovë.",
     type: "website",
     locale: "sq_AL",
-    siteName: "Behar Kabashi - Web Design Profesional",
+    siteName: "Apex Agency",
     images: [
       {
         url: ogImage,
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Behar Kabashi - Web Design Profesional",
-    description: "Web design profesional për bizneset lokale në Kosovë. Website-a moderne që sjellin rezultata reale.",
+    title: "Apex Agency — Zhvillim Web & IT | Kosovë",
+    description: "Agjenci profesionale e zhvillimit web dhe zgjidhjeve IT për institucione, komuna dhe biznese në Kosovë.",
     images: [
       ogImage
     ],
